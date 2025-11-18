@@ -3,7 +3,12 @@
 #include "Header1.h"
 
 int main() {
-    header();
+    int a, b;
+    printf("輸入a的值：");
+    scanf("%d",&a);
+    printf("輸入b的值：");
+    scanf("%d",&b);
+    swap(&a, &b);
     system("pause");
     return 0;
 }
