@@ -1,6 +1,6 @@
 #ifndef Header1_h
 #define Header1_h
 
-void swap(int *a, int *b);
+void printArrayByPointer(int* arr, int length);
 
 #endif 

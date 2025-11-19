@@ -1,11 +1,8 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-void swap(int* a, int* b){
-	int c;
-	c = *a;
-	*a = *b;
-	*b = c;
-	printf("swap\n a = %d \n b = %d\n", *a, *b);
-	
+void printArrayByPointer(int* arr, int length) {
+	for (int i = 0; i < length; i++) {
+		printf("%d ",*(arr+i));
+	}
 }

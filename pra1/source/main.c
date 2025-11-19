@@ -3,12 +3,7 @@
 #include "Header1.h"
 
 int main() {
-    int a, b;
-    printf("輸入a的值：");
-    scanf("%d",&a);
-    printf("輸入b的值：");
-    scanf("%d",&b);
-    swap(&a, &b);
-    system("pause");
+    int arr[5] = {11,22,33,44,55};
+    printArrayByPointer(arr,5);
     return 0;
 }
