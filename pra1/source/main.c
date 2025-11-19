@@ -2,8 +2,15 @@
 #include <stdio.h>
 #include "Header1.h"
 
+
 int main() {
-    int arr[5] = {11,22,33,44,55};
-    printArrayByPointer(arr,5);
+    struct person p;
+    printf("請輸入姓名：");
+    scanf("%20s",p.name);
+    printf("請輸入年齡：");
+    scanf("%d",&p.age);
+    printf("請輸入身高：");
+    scanf("%f",&p.height);
+    printPerson(p);
     return 0;
 }

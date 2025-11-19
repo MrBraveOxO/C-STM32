@@ -1,6 +1,12 @@
 #ifndef Header1_h
 #define Header1_h
 
-void printArrayByPointer(int* arr, int length);
+typedef struct person {
+    char name[20];
+    int age;
+    float height;
+}person;
+
+void printPerson(person p);
 
 #endif 
