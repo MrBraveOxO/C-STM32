@@ -132,6 +132,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="..\..\include\user_define_1.c" />
     <ClCompile Include="..\..\source\main.c" />
     <ClCompile Include="user_define.c" />
   </ItemGroup>

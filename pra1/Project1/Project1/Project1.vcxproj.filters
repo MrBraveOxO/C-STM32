@@ -21,6 +21,9 @@
     <ClCompile Include="user_define.c">
       <Filter>source</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\include\user_define_1.c">
+      <Filter>source</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\include\Header1.h">
