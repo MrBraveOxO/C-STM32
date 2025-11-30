@@ -3,11 +3,14 @@
 #include <stdlib.h>
 #include <string.h>
 #include "Header1.h"
-void initCar(car* c, char* plate, int cc, cartype type) {
-	strcpy(c->plate,plate);
-	c->cc = cc;
-	c->type = type;
-}
-void setCC(car* c, int newCC) {
-	c->cc = newCC;
+void inputStudent(Student* s) {
+    printf("請輸入姓名:");
+    scanf("%s", s->name);
+    printf("請輸入年齡:");
+    scanf("%d", &s->age);
+    printf("請輸入年級:");
+    scanf("%d", &s->grade);
+    printf("請輸入分數:");
+    scanf("%f", &s->score);
+    printf("\n");
 }
