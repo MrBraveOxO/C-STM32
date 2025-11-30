@@ -5,18 +5,25 @@
 
 
 int main() {
-    person p;
-    int gen;
-    printf("請輸入姓名：");
-    scanf("%20s",p.name);
-    printf("請輸入性別(男=0，女=1)：");
-    scanf("%d",&gen);
-    setGender(&p , gen);
-    printf("請輸入年齡：");
-    scanf("%d",&p.age);
-    printf("請輸入身高：");
-    scanf("%f",&p.height);
-    printPerson(p); 
+    car c;
+    char plate[20];
+    int cc,cc2;
+    cartype type;
+    printf("輸入車輛信息......\n");
+    printf("車牌:");
+    scanf("%s", plate);
+    printf("cc數:");
+    scanf("%d", &cc);
+    printf("車款:");
+    scanf("%d", &type);
+    printf("初始化車輛......\n");
+    initCar(&c,plate,cc,type);
+    printCar(c);
+    printf("修改cc數......\n");
+    printf("修改cc數為:");
+    scanf("%d",&cc2);
+    setCC(&c,cc2);
+    printCar(c);
     return 0;
    
 }

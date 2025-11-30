@@ -1,15 +1,14 @@
 #ifndef Header1_h
 #define Header1_h
-typedef enum gender { MALE, FEMALE, OTHER } Gender;
+typedef enum CarType {SEDAN,SUV,TRUCK} cartype;
 
-typedef struct person {
-    char name[20];
-    Gender gender;
-    int age;
-    float height;
-}person;
+typedef struct Car {
+	char plate[20];
+	int cc;
+	cartype type;
+}car;
 
-void setGender(person *p, int g);
-void printPerson(person p);
-
+void initCar(car* c, char* plate, int cc, cartype type);
+void setCC(car* c, int newCC);
+void printCar(car c);
 #endif 
