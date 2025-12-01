@@ -5,10 +5,10 @@
 
 
 int main() {
-    Student s;
-    inputStudent(&s);
-    printStudent(s);
-
+    Student *s = createStudent();
+    //inputStudent(&s);
+    printStudent(*s);
+    free(s);
     return 0;
    
 }

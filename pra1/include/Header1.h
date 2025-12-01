@@ -15,6 +15,7 @@ typedef struct STUDENT {
 	float score;
 }Student;
 
+Student* createStudent();
 void inputStudent(Student* s);
 void printStudent(Student s);
 #endif
