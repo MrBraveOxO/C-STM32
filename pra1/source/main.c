@@ -6,7 +6,7 @@
 typedef enum Act_Status {
     act_exit = 0 ,add,del,show,revise
 }act_s;
-const char* grade_str[] = { "一","二","三","四" };
+
 
 int main() {
     Student* student = 0;
@@ -24,24 +24,18 @@ int main() {
 
         switch (act) {
         case add: 
-            stu_amount++;
-            student = CreateStudent(student,stu_amount);
+            CreateStudent(&student,&stu_amount);
             break;
         case del:
+            ShowStudent(student, stu_amount);
+            DelStudent(&student,&stu_amount);
+            break;
         case show:
-            //ShowStudent(student);
-            printf("目前共有 %d 名學生：\n", stu_amount);
-            for (int i = 0; i < stu_amount; i++) {
-                printf("%d. %s %d歲 grade:大%s score:%.2f\n",
-                    i + 1,
-                    student[i].name,
-                    student[i].age,
-                    grade_str[student[i].grade-1],
-                    student[i].score
-                );
-            }
+            ShowStudent(student,stu_amount);
             break;
         case revise:
+            ShowStudent(student, stu_amount);
+            ReviseStudent(&student,stu_amount);
         default:
             printf("輸入錯誤，請重新選擇功能\n\n");
             break;
