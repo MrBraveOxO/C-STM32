@@ -4,7 +4,7 @@
 #include "Header1.h"
 
 typedef enum Act_Status {
-    act_exit = 0 ,add,del,show,revise
+    act_exit = 0 ,add,del,show,revise,printexcel,read_data
 }act_s;
 
 
@@ -17,7 +17,9 @@ int main() {
         printf("1.新增學生\n");
         printf("2.刪除學生\n");
         printf("3.顯示學生資料\n");
-        printf("4.修改學生資料\n\n");
+        printf("4.修改學生資料\n");
+        printf("5.印出各年級學生成績排行\n");
+        printf("6.讀取學生資料\n\n");
         act_s act;
         scanf("%d",&act);
         if (act == act_exit) break;
@@ -36,10 +38,17 @@ int main() {
         case revise:
             ShowStudent(student, stu_amount);
             ReviseStudent(&student,stu_amount);
+            break;
+        case printexcel:
+            PrintExcel(student,stu_amount);
+            break;
+        case read_data:
+           Read(&student,&stu_amount);
+            break;
         default:
             printf("輸入錯誤，請重新選擇功能\n\n");
             break;
-        };
+        }
     }
     
     return 0;

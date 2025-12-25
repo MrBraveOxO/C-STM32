@@ -80,5 +80,5 @@ void ReviseStudent(Student** student, int stu_amount) {
 				break;
 		};
 		printf("н╫зяжие\!\n\n");
-	}
+	} 
 }
