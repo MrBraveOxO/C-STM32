@@ -3,7 +3,9 @@
 
 
 
-
+typedef enum Act_Status {
+    act_exit = 0, add, del, show, revise, printexcel, read_data
+}act_s;
 
 typedef struct STUDENT {
     char name[30];
@@ -12,7 +14,7 @@ typedef struct STUDENT {
     float score;
 } Student;
 
-
+//void menu(Student** student, int* stu_amount);
 void CreateStudent(Student **student, int *stu_amount);
 void DelStudent(Student **student, int *stu_amount);
 void ReviseStudent(Student **student,int stu_amount);

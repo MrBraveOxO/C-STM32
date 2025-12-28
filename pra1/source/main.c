@@ -3,15 +3,14 @@
 #include <stdlib.h>
 #include "Header1.h"
 
-typedef enum Act_Status {
-    act_exit = 0 ,add,del,show,revise,printexcel,read_data
-}act_s;
+
 
 
 int main() {
     Student* student = 0;
     int stu_amount = 0;
     while (1) {
+
         printf("請選擇功能:\n");
         printf("0.離開程式\n");
         printf("1.新增學生\n");
