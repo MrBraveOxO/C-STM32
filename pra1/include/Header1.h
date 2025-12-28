@@ -14,7 +14,7 @@ typedef struct STUDENT {
     float score;
 } Student;
 
-//void menu(Student** student, int* stu_amount);
+void menu(Student** student, int* stu_amount);
 void CreateStudent(Student **student, int *stu_amount);
 void DelStudent(Student **student, int *stu_amount);
 void ReviseStudent(Student **student,int stu_amount);

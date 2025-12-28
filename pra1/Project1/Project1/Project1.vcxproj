@@ -132,10 +132,10 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\include\user_define_1.c" />
     <ClCompile Include="..\..\source\main.c" />
     <ClCompile Include="..\..\source\menu.c" />
-    <ClCompile Include="user_define.c" />
+    <ClCompile Include="..\..\source\studentact.c" />
+    <ClCompile Include="..\..\source\studentshow.c" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\include\Header1.h" />

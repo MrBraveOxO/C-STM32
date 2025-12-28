@@ -10,8 +10,16 @@ int main() {
     Student* student = 0;
     int stu_amount = 0;
     while (1) {
+        menu(&student,&stu_amount);
+      
+    }
+    
+    return 0;
+   
+} 
 
-        printf("請選擇功能:\n");
+
+/*printf("請選擇功能:\n");
         printf("0.離開程式\n");
         printf("1.新增學生\n");
         printf("2.刪除學生\n");
@@ -47,9 +55,4 @@ int main() {
         default:
             printf("輸入錯誤，請重新選擇功能\n\n");
             break;
-        }
-    }
-    
-    return 0;
-   
-}
+        }*/

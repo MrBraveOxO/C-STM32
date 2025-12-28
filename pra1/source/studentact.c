@@ -4,11 +4,11 @@
 #include <string.h>
 #include "Header1.h"
 
-void CreateStudent(Student** student,int* stu_amount) {
+void CreateStudent(Student** student, int* stu_amount) {
 	(*stu_amount)++;
 	*student = realloc(*student, sizeof(Student) * (*stu_amount));
 	printf("輸入新增學生姓名:");
-	scanf("%s",(*student)[*stu_amount-1].name);
+	scanf("%s", (*student)[*stu_amount - 1].name);
 	printf("輸入新增學生年齡:");
 	scanf("%d", &(*student)[*stu_amount - 1].age);
 	printf("輸入新增學生成績:");
@@ -40,13 +40,13 @@ void DelStudent(Student** student, int* stu_amount) {
 			new_stu[i] = (*student)[i];
 			i++;
 		}
-		for (int j = del; j < *stu_amount;j++)	new_stu[j] = (*student)[j + 1];
+		for (int j = del; j < *stu_amount; j++)	new_stu[j] = (*student)[j + 1];
 		free(*student);
 		*student = new_stu;
 		printf("刪除成功\n\n");
 
 	}
-	
+
 }
 
 void ReviseStudent(Student** student, int stu_amount) {
@@ -62,23 +62,23 @@ void ReviseStudent(Student** student, int stu_amount) {
 		int revise;
 		scanf("%d", &revise);
 		switch (revise) {
-			case 1:
-				scanf("%s", (*student)[stu - 1].name);
-				break;
-			case 2:
-				scanf("%d",&(*student)[stu - 1].age);
-				break;
-			case 3: 
-				scanf("%d", &(*student)[stu - 1].grade);
-				break;
-			case 4:
-				scanf("%f", &(*student)[stu - 1].score);
-				break;
-			default: 
-				printf("輸入錯誤，修改失敗!\n\n");
-				return;
-				break;
+		case 1:
+			scanf("%s", (*student)[stu - 1].name);
+			break;
+		case 2:
+			scanf("%d", &(*student)[stu - 1].age);
+			break;
+		case 3:
+			scanf("%d", &(*student)[stu - 1].grade);
+			break;
+		case 4:
+			scanf("%f", &(*student)[stu - 1].score);
+			break;
+		default:
+			printf("輸入錯誤，修改失敗!\n\n");
+			return;
+			break;
 		};
 		printf("修改成功!\n\n");
-	} 
+	}
 }
